@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html>
-<body>
+  <head>
+    <title></title>
+    <script language="javascript" type="text/javascript">
+        function OnLoad() {
+            var paramValue = window.location.href.split("?")[1].split("=")[1];
+            document.getElementById("UsName").innerHTML = paramValue;
+        }
+    </script>
+</head>
+<body onload="OnLoad()">
 <h1>Hello World</h1>
 <p>I'm hosted with GitHub Pages(5).</p>
   <script>
 confirm('Хотите ли ви ?')
   </script>
   
-  <?php
-  echo  'jh';
-  $say = htmlspecialchars($_POST['say']);
-  $to  = htmlspecialchars($_POST['to']);
-
-  echo  $say, ' ', $to;
-?>
+ <font id="UsName">
+    </font>
 </body>
 </html>
