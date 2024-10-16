@@ -1,19 +1,19 @@
 <!doctype HTML>
 <html>
-<h1>bl  v7</h1>
+<h1>bl  v8</h1>
 <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
 <script src="https://raw.githack.com/jeromeetienne/AR.js/2.0.5/aframe/build/aframe-ar.js"></script>
 
 <body style='margin : 0px; overflow: scroll;'>
  
  <a-scene embedded arjs>
-   <a-assets>
-    <a-asset-item id="un-obj" src="/un.obj"></a-asset-item>
-    <a-asset-item id="un-mtl" src="/un.mtl"></a-asset-item>
-  </a-assets>
-    
 
-  <a-entity obj-model="obj: #un-obj; mtl: #un-mtl"></a-entity>
+   <a-assets>
+    <a-asset-item id="cityModel" src="/untitledd.gltf"></a-asset-item>
+  </a-assets>
+  <a-entity gltf-model="#cityModel" modify-materials></a-entity>
+  
+
     <a-marker-camera preset='hiro'></a-marker-camera>
   </a-scene>
 
